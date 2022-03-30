@@ -51,17 +51,20 @@ div > h3{
 }
 section{
     width: 420px;
-    height: 300px;
+    height: 260px;
     display: flex;
-    overflow-x: scroll
+    overflow-x: scroll;
 }
 article{
     width: 180px;
-    height: 230px;
+    height: 202px;
     background-color: #FFFFFF;
     box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
     border-radius: 9px;
     margin: 14px;
+    box-shadow:  0px 0px 10px 1px rgba(0,194,11,0.52);
+    margin-top: 5px;
+    margin-bottom: 10px ;
 }
 figure > img {
     width: 144px;
@@ -131,4 +134,9 @@ footer > button{
 
 button:hover{
     filter:brightness(95%);
+}
+article > ion-icon{
+    margin-left: 50px;
+    color: green;
+
 }
