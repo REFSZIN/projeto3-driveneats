@@ -1,0 +1,134 @@
+body{
+    background-color:#E5E5E5;
+}
+header{
+    position: fixed;
+    width: 425px;
+    height: 92px;
+    left: 0px;
+    top: 0px;
+    background-color: #CF2B2B;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+nav > h1 {
+    font-family: 'Righteous';
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 55px;
+    letter-spacing: -0.012em;
+    text-align: left;
+    margin-left: 20px;
+    color: #FFFFFF;
+}
+nav > h2 {
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-left: 20px;
+    color: #FFFFFF;
+}
+main{
+    margin-top: 110px;
+    margin-bottom: 58px;
+}
+div > h3{
+    font-family: 'Righteous';
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0.018em;
+    text-align: left;
+    margin: 8px;
+    display: flex;
+    flex-direction: column;
+    color: rgba(51, 51, 51, 1);
+}
+section{
+    width: 420px;
+    height: 300px;
+    display: flex;
+    overflow-x: scroll
+}
+article{
+    width: 180px;
+    height: 230px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    margin: 14px;
+}
+figure > img {
+    width: 144px;
+    height: 87px;
+    border-radius: 6px;
+    margin: 6px;
+}
+figcaption{
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(51, 51, 51, 1);
+    margin-left: 12px ;
+}
+h5{
+    font-family: 'Roboto';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(166, 166, 166, 1);
+    margin-left: 12px;
+    margin-bottom: 20px;
+}
+span{
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(0, 0, 0, 1);
+    margin-left: 12px ;
+}
+footer{
+    position: fixed;
+    width: 425px;
+    height: 90px;
+    left: 0px;
+    bottom: 0px;
+    background: #FFFFFF;
+}
+footer > button{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.018em;
+    color: #FFFFFF;
+    position: absolute;
+    width: 364px;
+    height: 58px;
+    left: 25px;
+    bottom: 16px;
+    background: #CBCBCB;
+    border-radius: 50px;
+}
+
+button:hover{
+    filter:brightness(95%);
+}
