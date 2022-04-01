@@ -64,7 +64,7 @@ article{
     box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
     border-radius: 9px;
     margin: 14px;
-    box-shadow:  0px 0px 10px 1px rgba(0,194,11,0.52);
+    box-shadow:  0px 0px 5px 1px #FFFFFF;
     margin-top: 15px;
     margin-bottom: 10px ;
 }
@@ -140,5 +140,12 @@ button:hover{
 article > ion-icon{
     margin-left: 50px;
     color: green;
-    
+    display: none;
+}
+section::-webkit-scrollbar{
+    display: none;
+}
+section {
+    -ms-overflow-style: none;
+    scrollbar-width: none;  
 }
