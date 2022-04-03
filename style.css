@@ -1,15 +1,17 @@
 body{
+    position: absolute;
     width: 100%;
     background-color:#E5E5E5;
 }
 header{
     position: fixed;
-    width: 425px;
+    width: 424px;
     height: 92px;
     left: 0px;
     top: 0px;
     background-color: #CF2B2B;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 1 ;
 }
 nav > h1 {
     font-family: 'Righteous';
@@ -110,7 +112,7 @@ span{
 }
 footer{
     position: fixed;
-    width: 425px;
+    width: 426px;
     height: 90px;
     left: 0px;
     bottom: 0px;
@@ -136,6 +138,7 @@ footer > button{
 
 button:hover{
     filter:brightness(95%);
+    background-color: green;
 }
 article > ion-icon{
     margin-left: 50px;
@@ -148,4 +151,204 @@ section::-webkit-scrollbar{
 section {
     -ms-overflow-style: none;
     scrollbar-width: none;  
+}
+.backfinalizar{
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 424px;
+    height: 1090px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+summary{
+    display:inline;
+    width: 380px;
+    height: 540px ;
+    padding: 30px;
+    background-color: #50D074;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+}
+.finalizarzap{
+    margin-top: 5px;
+    width: 320px ;
+    height: 46px;
+    font-family: 'Roboto';
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    padding: 2px;
+    font-size: 16px;
+    border-width: 3px;
+    border-color: #18a827;
+    background-color: #FFFFFF;
+    color: black;
+    border-style: inset;
+    border-radius: 14px;
+    box-shadow: -1px 2px 10px rgba(26,240,106,.75);
+}
+.nome > input{
+    padding: 2px;
+    font-size: 16px;
+    border-width: 3px;
+    border-color: #18a827;
+    background-color: #FFFFFF;
+    color: #206d56;
+    border-style: inset;
+    border-radius: 14px;
+    box-shadow: -1px 2px 10px rgba(26,240,106,.75);
+    text-shadow: 0px 0px 1px rgba(66,66,66,.75);
+    width: 320px;
+    height: 40px;
+    border-radius: 9px;
+}
+.nome > p {
+    font-family: 'Righteous';
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0.018em;
+    text-align: left;
+    margin: 4px;
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    color: rgba(51, 51, 51, 1);
+}
+.endereco > p {
+    font-family: 'Righteous';
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0.018em;
+    text-align: left;
+    margin: 4px;
+    margin-left: 4px;
+    display: flex;
+    flex-direction: column;
+    color: rgba(51, 51, 51, 1);
+}
+.endereco > input{
+    padding: 2px;
+    font-size: 16px;
+    border-width: 3px;
+    border-color: #18a827;
+    background-color: #FFFFFF;
+    color: #206d56;
+    border-style: inset;
+    border-radius: 14px;
+    box-shadow: -1px 2px 10px rgba(26,240,106,.75);
+    text-shadow: 0px 0px 1px rgba(66,66,66,.75);
+    border-radius: 9px;
+    width: 320px;
+    height: 40px;
+}
+.pagamentop{
+    font-family: 'Righteous';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 10px;
+    letter-spacing: 0.018em;
+    text-align: left;
+    margin: 8px;
+    margin-top: 10px;
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    color: rgba(51, 51, 51, 1);
+}
+.formapagamento > label{
+    font-family: 'Righteous';
+    font-size: 14px;
+    font-style: bold;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0.018em;
+    text-align: left;
+    margin-left: 5px;
+    color: rgba(51, 51, 51, 1);
+}
+.finalprato > p{
+    font-family: 'Righteous';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0.018em;
+    text-align: left;
+    margin-left: 5px;
+    color: rgba(51, 51, 51, 1);
+}
+.finalbebida > p{
+    font-family: 'Righteous';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0.018em;
+    text-align: left;
+    margin-left: 5px;
+    color: rgba(51, 51, 51, 1);
+}
+.finalsobremesa > p {
+    font-family: 'Righteous';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0.018em;
+    text-align: left;
+    margin-left: 5px;
+    color: rgba(51, 51, 51, 1);
+}
+.finalsobremesa{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.finalbebida{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.finalprato{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.formapagamento{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.somafinal{
+    font-family: 'Righteous';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+input::placeholder{
+    text-align: center;
+}
+input > text{
+    padding-left: 40px;
 }

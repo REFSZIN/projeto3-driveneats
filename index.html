@@ -9,6 +9,49 @@
     <title>projeto3-driveneats</title>
 </head>
 <body>
+    <div class="backfinalizar">
+        <summary>
+            <div class="nome">
+                <p>Qual seu nome :</p>
+                <input type="text" placeholder="Nome">
+            </div>
+            <div class="endereco">
+                <p>Endereço de entrega :</p>
+                <input type="text" placeholder="Endereço">
+            </div>
+            <p class="pagamentop">Qual forma de pagamento :</p>
+            <div class="formapagamento">
+                <div>
+                <input type="radio" id="dinheiro" name="metodo_pagamento" value="dinheiro">
+                    <label for="dinheiro">DINHEIRO</label><br>
+                </div>
+                <div>
+                <input type="radio" id="cartao" name="metodo_pagamento" value="cartao">
+                    <label for="cartao">CARTÃO</label><br>
+                </div>
+            </div>
+            <div class="finalprato">
+                <p>Prato:</p>
+                <p>nomeprato</p>
+                <p> valor1 </p>
+            </div>
+            <div class="finalbebida">
+                <p>Bebida:</p>
+                <p>nomebebida</p>
+                <p> valor2 </p>
+            </div>
+            <div class="finalsobremesa">
+                <p>Sobremesa:</p>
+                <p>nomesobremesa</p>
+                <p> valor3 </p>
+            </div>
+            <div class="somafinal">
+                <p>Valor Total :</p>
+                <p>Soma</p>
+            </div>
+            <button class="finalizarzap">Finalizar e enviar pedido.</button>
+        </summary>
+    </div>
     <header>
         <nav>
             <h1>DrivenEats</h1>
@@ -112,14 +155,10 @@
                 <ion-icon id="checkmark3_3" name="checkmark-circle"></ion-icon>
             </article>
         </section>
-        <div>
-
-        </div>
     </main>
     <footer>
-        <button onclick="finalizar()">
-            Selecione os 3 itens<br>
-            para fechar o pedido
+        <button class="botao" onclick="finalizar(this)">
+            Confirmar Pedido
         </button>
     </footer>
     <script src="script.js"></script>]

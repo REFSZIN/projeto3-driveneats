@@ -102,7 +102,7 @@ function selecao3_3 () {
 function finalizar() {
     const pedido =
     "Prato Principal = " + principal 
-    + " Bebida = " + bebida 
+    + " Bebida = " + bebida
     + " Sobremesa = " + sobremesa;
     const soma = valor1 + valor2 +valor3 ; 
     alert(pedido +"       Valor ===>"+ soma)
