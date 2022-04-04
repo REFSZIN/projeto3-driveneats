@@ -9,24 +9,24 @@
     <title>projeto3-driveneats</title>
 </head>
 <body>
-    <div class="backfinalizar-back backfinalizar">
+    <div class="backfinalizar sumir">
         <summary>
             <div class="nome">
                 <p>Qual seu nome :</p>
-                <input type="text" placeholder="Nome">
+                <input class="name" type="text" placeholder="Nome">
             </div>
             <div class="endereco">
                 <p>Endereço de entrega :</p>
-                <input type="text" placeholder="Endereço">
+            <input  class="enderesu"type="text" placeholder="Endereço">
             </div>
             <p class="pagamentop">Qual forma de pagamento :</p>
             <div class="formapagamento">
                 <div>
-                <input type="radio" id="dinheiro" name="metodo_pagamento" value="dinheiro">
+                <input type="radio" class="dinheiro" name="metodo_pagamento" value="dinheiro">
                     <label for="dinheiro">DINHEIRO</label><br>
                 </div>
                 <div>
-                <input type="radio" id="cartao" name="metodo_pagamento" value="cartao">
+                <input type="radio" class="cartao" name="metodo_pagamento" value="cartao">
                     <label for="cartao">CARTÃO</label><br>
                 </div>
             </div>
@@ -62,106 +62,106 @@
         <div>
             <h3 class="titulo1">Primeiro, seu prato</h3>
         </div>
-        <section>
-            <article id="Frango" onclick="selecao1_1()">
+        <section class="principal">
+            <article class="box" onclick="selecionarPrin(this)">
                 <figure>
                     <img src="assets/Frango.png" alt="Frango">
-                    <figcaption class="principal1_1">Frango Xin Xang</figcaption>
+                    <figcaption>Frango Xin Xang</figcaption>
                 </figure>
                 <h5>Um pouco de batata, um pouco de salada</h5>
                 <span>R$ 14,90</span>
-                <ion-icon id="checkmark1_1" name="checkmark-circle"></ion-icon>
+                <ion-icon class="checkmark sumir" name="checkmark-circle"></ion-icon>
             </article>
-            <article id="Frango2" onclick="selecao1_2()">
+            <article class="box" onclick="selecionarPrin(this)">
                 <figure>
                     <img src="assets/Frango.png" alt="Frango">
                     <figcaption>Frango Yin Yang</figcaption>
                 </figure>
                 <h5>Um pouco de batata, um pouco de salada</h5>
                 <span>R$ 15,90</span>
-                <ion-icon id="checkmark1_2" name="checkmark-circle"></ion-icon>
+                <ion-icon class="checkmark sumir" name="checkmark-circle"></ion-icon>
             </article>
-            <article id="Frango3" onclick="selecao1_3()">
+            <article class="box" onclick="selecionarPrin(this)">
                 <figure>
                     <img src="assets/Frango.png" alt="Frango">
                     <figcaption>Frango Yin Yang</figcaption>
                 </figure>
                 <h5>Um pouco de batata, um pouco de salada</h5>
                 <span>R$ 16,90</span>
-                <ion-icon id="checkmark1_3" name="checkmark-circle"></ion-icon>
+                <ion-icon class="checkmark sumir " name="checkmark-circle"></ion-icon>
             </article>
         </section>
         <div>
             <h3>Agora, sua bebida</h3>
         </div>
-        <section>
-            <article id="coca1" onclick="selecao2_1()">
+        <section class="bebida">
+            <article class="box1" onclick="selecionarBebi(this)">
                 <figure>
                     <img src="assets/coquinha.png" alt="Coca-Cola">
                     <figcaption>Coca-Cola Lata</figcaption>
                 </figure>
                 <h5>Lata 350ml</h5>
                 <span>R$ 4,90</span>
-                <ion-icon id="checkmark2_1" name="checkmark-circle"></ion-icon>
+                <ion-icon class="checkmark sumir" name="checkmark-circle"></ion-icon>
             </article>
-            <article id="coca2" onclick="selecao2_2()">
+            <article class="box1" onclick="selecionarBebi(this)">
                 <figure>
                     <img src="assets/coquinha.png" alt="Coca-Cola">
                     <figcaption>Coca-Cola Lata</figcaption>
                 </figure>
                 <h5>Lata 350ml</h5>
                 <span>R$ 5,90</span>
-                <ion-icon id="checkmark2_2" name="checkmark-circle"></ion-icon>
+                <ion-icon class="checkmark sumir" name="checkmark-circle"></ion-icon>
             </article>
-            <article id="coca3" onclick="selecao2_3()">
+            <article class="box1" onclick="selecionarBebi(this)">
                 <figure>
                     <img src="assets/coquinha.png" alt="Coca-Cola">
                     <figcaption>Coca-Cola Lata</figcaption>
                 </figure>
                 <h5>Lata 350ml</h5>
                 <span>R$ 6,90</span>
-                <ion-icon id="checkmark2_3" name="checkmark-circle"></ion-icon>
+                <ion-icon class="checkmark sumir" name="checkmark-circle"></ion-icon>
             </article>
         </section>
         <div>
             <h3>Por fim, sua sobremesa</h3>
         </div>
-        <section>
-            <article id="pudin1" onclick="selecao3_1()">
+        <section class="sobremesa">
+            <article class="box2" onclick="selecionarSobre(this)">
                 <figure>
                     <img src="assets/Pudin.png" alt="Pudin">
                     <figcaption>Pudinzinho</figcaption>
                 </figure>
                 <h5>Apenas pudim</h5>
                 <span>R$ 7,90</span>
-                <ion-icon id="checkmark3_1" name="checkmark-circle"></ion-icon>
+                <ion-icon class="checkmark sumir" name="checkmark-circle"></ion-icon>
             </article>
-            <article id="pudin2" onclick="selecao3_2()">
+            <article class="box2" onclick="selecionarSobre(this)">
                 <figure>
                     <img src="assets/Pudin.png" alt="Pudin">
                     <figcaption>Pudinzinho</figcaption>
                 </figure>
                 <h5>Apenas pudim</h5>
                 <span>R$ 8,90</span>
-                <ion-icon id="checkmark3_2" name="checkmark-circle"></ion-icon>
+                <ion-icon class="checkmark sumir" name="checkmark-circle"></ion-icon>
             </article>
-            <article id="pudin3" onclick="selecao3_3()">
+            <article class="box2" onclick="selecionarSobre(this)">
                 <figure>
                     <img src="assets/Pudin.png" alt="Pudin">
                     <figcaption>Pudinzinho</figcaption>
                 </figure>
                 <h5>Apenas pudim</h5>
                 <span>R$ 9,90</span>
-                <ion-icon id="checkmark3_3" name="checkmark-circle"></ion-icon>
+                <ion-icon class="checkmark sumir" name="checkmark-circle"></ion-icon>
             </article>
         </section>
     </main>
     <footer>
-        <button type="button" class="botao" onclick="finalizarPedido()" disable>
-            Confirmar Pedido
+        <button type="button" class="botao" onclick="revisarPedido()" disabled>
+            <p>Selecione os 3 itens<br>para fechar o pedido</p>
         </button>
     </footer>
-    <script src="script.js"></script>]
+    <script src="script.js"></script>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </body>
 </html>

@@ -1,127 +1,82 @@
-// ids
-let nome = 0;
-let endereco = 0;
-let formapagamento = 0;
-let principal= 0;
-let bebida= 0 ;
-let sobremesa= 0 ;
-let valor1= 0 ;
-let valor2= 0;
-let valor3= 0;
+let formapagamento = '';
+let principal= '';
+let bebida= '';
+let sobremesa= '';
 let soma= 0;
+let finalprato_name = '';
+let pratofinal = 0;
+let finalbebida_name = '';
+let bebidafinal = 0;
+let finalsobremesa_name = '';
+let sobremesafinal =  0;
 
-function selecao1_1 () {
-    document.getElementById("Frango").style.boxShadow = "0px 0px 10px 2px rgba(0,194,11,0.52)";
-    document.getElementById("Frango2").style.boxShadow = "0px 0px 5px 1px #FFFFFF";
-    document.getElementById("Frango3").style.boxShadow = "0px 0px 5px 1px #FFFFFF";
-    document.getElementById("checkmark1_1").style.display = "inline-block";
-    document.getElementById("checkmark1_2").style.display = "none";
-    document.getElementById("checkmark1_3").style.display = "none";
-    principal = "Frango Yin Yang 1" ;
-    valor1 = 14.90;
+function selecionarPrin(principal){
+    let ctz;
+    let selecionado = document.querySelector(".principal > .box.selecionado");
+    if (selecionado !== null){
+    ctz = document.querySelector(".principal > .box.selecionado > .checkmark");
+    ctz.classList.add("sumir");
+    selecionado.classList.remove("selecionado");
 }
-function selecao1_2 () {
-    document.getElementById("Frango").style.boxShadow = "0px 0px 5px 1px #FFFFFF";
-    document.getElementById("Frango2").style.boxShadow = "0px 0px 10px 2px rgba(0,194,11,0.52)";
-    document.getElementById("Frango3").style.boxShadow = "0px 0px 5px 1px #FFFFFF";
-    document.getElementById("checkmark1_1").style.display = "none";
-    document.getElementById("checkmark1_2").style.display = "inline-block";
-    document.getElementById("checkmark1_3").style.display = "none";
-    principal = "Frango Yin Yang 2" ; 
-    valor1 = 15.90;
+    principal.classList.add("selecionado");
+    ctz = document.querySelector(".principal > .box.selecionado > .checkmark");
+    ctz.classList.remove("sumir");
 }
-function selecao1_3 () {
-    document.getElementById("Frango").style.boxShadow = "0px 0px 5px 1px #FFFFFF";
-    document.getElementById("Frango2").style.boxShadow = "0px 0px 5px 1px #FFFFFF";
-    document.getElementById("Frango3").style.boxShadow = "0px 0px 10px 2px rgba(0,194,11,0.52)";
-    document.getElementById("checkmark1_1").style.display = "none";
-    document.getElementById("checkmark1_2").style.display = "none";
-    document.getElementById("checkmark1_3").style.display = "inline-block";
-    principal = "Frango Yin Yang 3" ; 
-    valor1 = 16.90;
+function selecionarBebi(bebida){
+    let ctz1;
+    let selecionado2 = document.querySelector(".bebida > .box1.selecionado");
+    if (selecionado2 !== null){
+    ctz1 = document.querySelector(".bebida > .box1.selecionado > .checkmark");
+    ctz1.classList.add("sumir");
+    selecionado2.classList.remove("selecionado");
 }
-function selecao2_1 () {
-    document.getElementById("coca1").style.boxShadow = "0px 0px 10px 2px rgba(0,194,11,0.52)";
-    document.getElementById("coca2").style.boxShadow = "0px 0px 5px 1px #FFFFFF";
-    document.getElementById("coca3").style.boxShadow ="0px 0px 5px 1px #FFFFFF";
-    document.getElementById("checkmark2_1").style.display = "inline-block";
-    document.getElementById("checkmark2_2").style.display = "none";
-    document.getElementById("checkmark2_3").style.display = "none";
-    bebida = "Coca-Cola Lata 1" ; 
-    valor2 = 4.90;
+    bebida.classList.add("selecionado");
+    ctz1 = document.querySelector(".bebida > .box1.selecionado > .checkmark");
+    ctz1.classList.remove("sumir");
 }
-function selecao2_2 () {
-    document.getElementById("coca1").style.boxShadow = "0px 0px 5px 1px #FFFFFF";
-    document.getElementById("coca2").style.boxShadow = "0px 0px 10px 2px rgba(0,194,11,0.52)";
-    document.getElementById("coca3").style.boxShadow = "0px 0px 5px 1px #FFFFFF";
-    document.getElementById("checkmark2_1").style.display = "none";
-    document.getElementById("checkmark2_2").style.display = "inline-block";
-    document.getElementById("checkmark2_3").style.display = "none";
-    bebida = "Coca-Cola Lata 2" ; 
-    valor2 = 5.90;
+function selecionarSobre(sobremesa){
+    let ctz2;
+    let selecionado3 = document.querySelector(".sobremesa > .box2.selecionado");
+    if (selecionado3 !== null){
+    ctz2 = document.querySelector(".sobremesa > .box2.selecionado > .checkmark");
+    ctz2.classList.add("sumir");
+    selecionado3.classList.remove("selecionado");
 }
-function selecao2_3 () {
-    document.getElementById("coca1").style.boxShadow = "0px 0px 5px 1px #FFFFFF";
-    document.getElementById("coca2").style.boxShadow = "0px 0px 5px 1px #FFFFFF";
-    document.getElementById("coca3").style.boxShadow = "0px 0px 10px 2px rgba(0,194,11,0.52)";
-    document.getElementById("checkmark2_1").style.display = "none";
-    document.getElementById("checkmark2_2").style.display = "none";
-    document.getElementById("checkmark2_3").style.display = "inline-block";
-    bebida = "Coca-Cola Lata 3" ; 
-    valor2 = 6.90;
-}
-function selecao3_1 () {
-    document.getElementById("pudin1").style.boxShadow = "0px 0px 10px 2px rgba(0,194,11,0.52)";
-    document.getElementById("pudin2").style.boxShadow = "0px 0px 5px 1px #FFFFFF";
-    document.getElementById("pudin3").style.boxShadow = "0px 0px 5px 1px #FFFFFF";
-    document.getElementById("checkmark3_1").style.display = "inline-block";
-    document.getElementById("checkmark3_2").style.display = "none";
-    document.getElementById("checkmark3_3").style.display = "none";
-    sobremesa = "Pudin 1" ; 
-    valor3 =  7.90;
-}
-function selecao3_2 () {
-    document.getElementById("pudin1").style.boxShadow = "0px 0px 5px 1px #FFFFFF";
-    document.getElementById("pudin2").style.boxShadow = "0px 0px 10px 2px rgba(0,194,11,0.52)";
-    document.getElementById("pudin3").style.boxShadow = "0px 0px 5px 1px #FFFFFF";
-    document.getElementById("checkmark3_1").style.display = "none";
-    document.getElementById("checkmark3_2").style.display = "inline-block";
-    document.getElementById("checkmark3_3").style.display = "none";
-    sobremesa = "Pudin 2" ; 
-    valor3 = 8.90;
-}
-function selecao3_3 () {
-    document.getElementById("pudin1").style.boxShadow = "0px 0px 5px 1px #FFFFFF";
-    document.getElementById("pudin2").style.boxShadow = "0px 0px 5px 1px #FFFFFF";
-    document.getElementById("pudin3").style.boxShadow = "0px 0px 10px 2px rgba(0,194,11,0.52)";
-    document.getElementById("checkmark3_1").style.display = "none";
-    document.getElementById("checkmark3_2").style.display = "none";
-    document.getElementById("checkmark3_3").style.display = "inline-block";
-    sobremesa = "Pudin 3" ; 
-    valor3 =  9.90;
-}   
-function finalizarPedido (){
-    if (principal && bebida  && sobremesa ) {
-        document.getElementById("botao").disabled = false;
-        document.getElementById("botao").style.button.backgroundColor = "rgba(0,194,11,0.52)";
-        document.getElementById("backfinalizar").removeClass("backfinalizar_back");
-        principal = document.getElementById("finalprato_name").innerHTML;
-        bebida = document.getElementById("finalbebida_name").innerHTML;
-        sobremesa = document.getElementById("finalsobremesa_name").innerHTML ;
-        valor1 = document.getElementById("pratofinal").innerHTML;
-        valor2 =document.getElementById("bebidafinal").innerHTML;
-        valor3 =document.getElementById("sobremesafinal").innerHTML ;
-        soma = valor1.toFixed(2) + valor2.toFixed(2) + valor3.toFixed(2);
-        soma = document.getElementById("finalsoma").innerHTML;
+    sobremesa.classList.add("selecionado");
+    ctz2 = document.querySelector(".sobremesa > .box2.selecionado > .checkmark");
+    ctz2.classList.remove("sumir");
+
+    const seleprin = document.querySelector(".box.selecionado");
+    const selebebi = document.querySelector(".box1.selecionado");
+    const selesobre = document.querySelector(".box2.selecionado");
+    if (seleprin && selebebi && selesobre) {
+        let botao =  document.querySelector(".botao");
+        botao.classList.add("verdao");
+        botao.innerHTML = `Revisar pedido`;
+        botao.disabled = false;
     }
 }
-    function enviarPedido(){
-        let wame = 
-        `Boa Noite +${nome}+
-        Prato: + ${finalprato_name}+ R$ + ${pratofinal} +
-        Bebida: + ${finalbebida_name} + R$ + ${bebidafinal} + 
-        Sobremesa: + ${finalsobremesa_name} + R$ + ${sobremesafinal} +
-        Forma de pagamento: + ${formapagamento} +
-        Valor Total: + R$ + ${soma}`;
-        window.open("https://wa.me/5532984898132?text=" + encodeURIComponent(wame));
-        }
+function revisarPedido() {
+    let finalizador = document.querySelector(".backfinalizar");
+    finalizador.classList.add("sumirfinal");
+    finalprato_name = selecionado.querySelector(".box figure figcaption").innerHTML;
+    pratofinal = selecionado.querySelector(".box span").innerHTML;
+    finalbebida_name = selecionado1.querySelector(".box figure figcaption").innerHTML;
+    bebidafinal = selecionado1.querySelector(".box span").innerHTML;
+    finalsobremesa_name = selecionado2.querySelector(".box figure figcaption").innerHTML;
+    sobremesafinal = selecionado2.querySelector(".box span").innerHTML;
+    Number(soma.toFixed(2)) = sobremesafinal + bebidafinal + pratofinal;
+}
+function enviarPedido(){
+    const endereco = document.querySelector('.endereco .enderesu').value;
+    const nome = document.querySelector(".nome .name").value;
+    let wame = 
+    `Boa Noite +${nome}+
+    Prato: + ${finalprato_name}+ R$ + ${pratofinal} +
+    Bebida: + ${finalbebida_name} + R$ + ${bebidafinal} + 
+    Sobremesa: + ${finalsobremesa_name} + R$ + ${sobremesafinal} +
+    Endereço: + ${endereco} +
+    Forma de pagamento: + ${formapagamento} +
+    Valor Total: + R$ + ${soma}`;
+    window.open("https://wa.me/5532984898132?text=" + encodeURIComponent(wame));
+}

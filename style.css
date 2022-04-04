@@ -1,4 +1,4 @@
-.backfinalizar_back{
+.backfinalizar{
     z-index:3;
     align-items: center;
     justify-content: center;
@@ -143,8 +143,11 @@ footer > button{
     height: 58px;
     left: 25px;
     bottom: 16px;
-    background: #CBCBCB;
+    background: #cbcbcb;
     border-radius: 50px;
+}
+.verdao{
+    background-color: #50D074;
 }
 
 button:hover{
@@ -162,7 +165,6 @@ button:hover{
 article > ion-icon{
     margin-left: 50px;
     color: green;
-    display: none;
 }
 section::-webkit-scrollbar{
     display: none;
@@ -171,22 +173,12 @@ section {
     -ms-overflow-style: none;
     scrollbar-width: none;  
 }
-.backfinalizar{
-    z-index:3;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    width: 424px;
-    height: 1090px;
-    background-color: rgba(255, 255, 255, 0.9);
-    display: flex;
-    display: none;
-}
 summary{
     display:inline;
     position: fixed;
+    top: 150px;
     width: 380px;
-    height: 540px ;
+    height: 540px;
     padding: 30px;
     background-color: #50D074;
     box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.25);
@@ -372,4 +364,13 @@ input::placeholder{
 }
 input > text{
     padding-left: 40px;
+}
+.selecionado{
+    box-shadow: 0px 0px 10px 2px rgba(0,194,11,0.52);
+}
+.sumir {
+    display: none;
+}
+.sumirfinal {
+    display: flex;
 }
