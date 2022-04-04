@@ -3,7 +3,7 @@ let nome = 0;
 let endereco = 0;
 let formapagamento = 0;
 let principal= 0;
-let bebida=0 ;
+let bebida= 0 ;
 let sobremesa= 0 ;
 let valor1= 0 ;
 let valor2= 0;
@@ -87,10 +87,8 @@ function selecao3_2 () {
     document.getElementById("checkmark3_1").style.display = "none";
     document.getElementById("checkmark3_2").style.display = "inline-block";
     document.getElementById("checkmark3_3").style.display = "none";
-    document.appendChild("image3_2") 
-    image3_2.innerHTML = `<img src="assets/pudin.png" alt="Pudin">`;
     sobremesa = "Pudin 2" ; 
-    valor1 = 8.90;
+    valor3 = 8.90;
 }
 function selecao3_3 () {
     document.getElementById("pudin1").style.boxShadow = "0px 0px 5px 1px #FFFFFF";
@@ -101,29 +99,29 @@ function selecao3_3 () {
     document.getElementById("checkmark3_3").style.display = "inline-block";
     sobremesa = "Pudin 3" ; 
     valor3 =  9.90;
-}
+}   
 function finalizarPedido (){
     if (principal && bebida  && sobremesa ) {
-        document.getElementsByClassName("botao").disabled = false;
-        document.getElementsByClassName("botao").style.backgroundColor = "rgba(0,194,11,0.52)";
-        document.getElementsByClassName(".backfinalizar").display = "flex";
-        principal = document.getElementsByClassName("finalprato_name").innerHTML = `${principal}`
-        bebida = document.getElementsByClassName("finalbebida_name").innerHTML = `${bebida}`
-        sobremesa = document.getElementsByClassName("finalsobremesa_name").innerHTML = `${sobremesa}`
-        valor1 = document.getElementsByClassName("pratofinal").innerHTML = `${valor1}`
-        valor2 =document.getElementsByClassName("bebidafinal").innerHTML = `${valor2}`
-        valor3 =document.getElementsByClassName("sobremesafinal").innerHTML = `${valor3}`
+        document.getElementById("botao").disabled = false;
+        document.getElementById("botao").style.button.backgroundColor = "rgba(0,194,11,0.52)";
+        document.getElementById("backfinalizar").removeClass("backfinalizar_back");
+        principal = document.getElementById("finalprato_name").innerHTML;
+        bebida = document.getElementById("finalbebida_name").innerHTML;
+        sobremesa = document.getElementById("finalsobremesa_name").innerHTML ;
+        valor1 = document.getElementById("pratofinal").innerHTML;
+        valor2 =document.getElementById("bebidafinal").innerHTML;
+        valor3 =document.getElementById("sobremesafinal").innerHTML ;
         soma = valor1.toFixed(2) + valor2.toFixed(2) + valor3.toFixed(2);
-        document.getElementsByClassName("finalsoma").innerHTML = `${soma}`
+        soma = document.getElementById("finalsoma").innerHTML;
     }
+}
     function enviarPedido(){
         let wame = 
-        `"Boa Noite" +${nome}+
-        "Prato:" + ${finalprato_name}+ "R$" + ${pratofinal} +
-        "Bebida:" + ${finalbebida_name} + "R$" + ${bebidafinal} + 
-        "Sobremesa:" + ${finalsobremesa_name} + "R$" + ${sobremesafinal} +
-        "Forma de pagamento:" + ${formapagamento} +
-        "Valor Total:" + "R$" + ${soma}`;
+        `Boa Noite +${nome}+
+        Prato: + ${finalprato_name}+ R$ + ${pratofinal} +
+        Bebida: + ${finalbebida_name} + R$ + ${bebidafinal} + 
+        Sobremesa: + ${finalsobremesa_name} + R$ + ${sobremesafinal} +
+        Forma de pagamento: + ${formapagamento} +
+        Valor Total: + R$ + ${soma}`;
         window.open("https://wa.me/5532984898132?text=" + encodeURIComponent(wame));
         }
-}

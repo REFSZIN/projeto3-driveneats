@@ -1,4 +1,13 @@
-
+.backfinalizar_back{
+    z-index:3;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 424px;
+    height: 1090px;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: none;
+}
 body{
     position: absolute;
     width: 100%;
@@ -140,7 +149,15 @@ footer > button{
 
 button:hover{
     filter:brightness(95%);
-
+    animation: bounce .5s;
+}
+@keyframes bounce{
+	10%, 40%, 70%{
+	transform: translateY(-2px);
+	}
+	25%, 55%, 85%{
+	transform: translateY(2px);
+	}
 }
 article > ion-icon{
     margin-left: 50px;
@@ -162,6 +179,7 @@ section {
     width: 424px;
     height: 1090px;
     background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
     display: none;
 }
 summary{
