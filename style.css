@@ -1,3 +1,4 @@
+
 body{
     position: absolute;
     width: 100%;
@@ -11,7 +12,7 @@ header{
     top: 0px;
     background-color: #CF2B2B;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    z-index: 1 ;
+    z-index: 2 ;
 }
 nav > h1 {
     font-family: 'Righteous';
@@ -36,6 +37,7 @@ nav > h2 {
     color: #FFFFFF;
 }
 main{
+    z-index: 1;
     margin-top: 110px;
     margin-bottom: 58px;
 }
@@ -55,7 +57,7 @@ div > h3{
 }
 section{
     width: 420px;
-    height: 260px;
+    height: 240px;
     display: flex;
     overflow-x: scroll;
 }
@@ -138,7 +140,7 @@ footer > button{
 
 button:hover{
     filter:brightness(95%);
-    background-color: green;
+
 }
 article > ion-icon{
     margin-left: 50px;
@@ -153,17 +155,18 @@ section {
     scrollbar-width: none;  
 }
 .backfinalizar{
-    z-index: 2;
-    display: flex;
+    z-index:3;
     align-items: center;
     justify-content: center;
     position: absolute;
     width: 424px;
     height: 1090px;
     background-color: rgba(255, 255, 255, 0.9);
+    display: none;
 }
 summary{
     display:inline;
+    position: fixed;
     width: 380px;
     height: 540px ;
     padding: 30px;

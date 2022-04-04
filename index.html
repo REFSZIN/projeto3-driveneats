@@ -32,24 +32,24 @@
             </div>
             <div class="finalprato">
                 <p>Prato:</p>
-                <p>nomeprato</p>
-                <p> valor1 </p>
+                <p class="finalprato_name">nomeprato</p>
+                <p class="pratofinal"> valor1 </p>
             </div>
             <div class="finalbebida">
                 <p>Bebida:</p>
-                <p>nomebebida</p>
-                <p> valor2 </p>
+                <p class="finalbebida_name">nomebebida</p>
+                <p class="bebidafinal"> valor2 </p>
             </div>
             <div class="finalsobremesa">
                 <p>Sobremesa:</p>
-                <p>nomesobremesa</p>
-                <p> valor3 </p>
+                <p class="finalsobremesa_name">nomesobremesa</p>
+                <p class="sobremesafinal"> valor3 </p>
             </div>
             <div class="somafinal">
                 <p>Valor Total :</p>
-                <p>Soma</p>
+                <p class="finalsoma">Soma</p>
             </div>
-            <button class="finalizarzap">Finalizar e enviar pedido.</button>
+            <button class="finalizarzap" onclick="enviarPedido()">Finalizar e enviar pedido.</button>
         </summary>
     </div>
     <header>
@@ -66,7 +66,7 @@
             <article id="Frango" onclick="selecao1_1()">
                 <figure>
                     <img src="assets/Frango.png" alt="Frango">
-                    <figcaption>Frango Yin Yang</figcaption>
+                    <figcaption class="principal1_1">Frango Xin Xang</figcaption>
                 </figure>
                 <h5>Um pouco de batata, um pouco de salada</h5>
                 <span>R$ 14,90</span>
@@ -78,7 +78,7 @@
                     <figcaption>Frango Yin Yang</figcaption>
                 </figure>
                 <h5>Um pouco de batata, um pouco de salada</h5>
-                <span>R$ 14,90</span>
+                <span>R$ 15,90</span>
                 <ion-icon id="checkmark1_2" name="checkmark-circle"></ion-icon>
             </article>
             <article id="Frango3" onclick="selecao1_3()">
@@ -87,7 +87,7 @@
                     <figcaption>Frango Yin Yang</figcaption>
                 </figure>
                 <h5>Um pouco de batata, um pouco de salada</h5>
-                <span>R$ 14,90</span>
+                <span>R$ 16,90</span>
                 <ion-icon id="checkmark1_3" name="checkmark-circle"></ion-icon>
             </article>
         </section>
@@ -110,7 +110,7 @@
                     <figcaption>Coca-Cola Lata</figcaption>
                 </figure>
                 <h5>Lata 350ml</h5>
-                <span>R$ 4,90</span>
+                <span>R$ 5,90</span>
                 <ion-icon id="checkmark2_2" name="checkmark-circle"></ion-icon>
             </article>
             <article id="coca3" onclick="selecao2_3()">
@@ -119,7 +119,7 @@
                     <figcaption>Coca-Cola Lata</figcaption>
                 </figure>
                 <h5>Lata 350ml</h5>
-                <span>R$ 4,90</span>
+                <span>R$ 6,90</span>
                 <ion-icon id="checkmark2_3" name="checkmark-circle"></ion-icon>
             </article>
         </section>
@@ -142,7 +142,7 @@
                     <figcaption>Pudinzinho</figcaption>
                 </figure>
                 <h5>Apenas pudim</h5>
-                <span>R$ 7,90</span>
+                <span>R$ 8,90</span>
                 <ion-icon id="checkmark3_2" name="checkmark-circle"></ion-icon>
             </article>
             <article id="pudin3" onclick="selecao3_3()">
@@ -151,13 +151,13 @@
                     <figcaption>Pudinzinho</figcaption>
                 </figure>
                 <h5>Apenas pudim</h5>
-                <span>R$ 7,90</span>
+                <span>R$ 9,90</span>
                 <ion-icon id="checkmark3_3" name="checkmark-circle"></ion-icon>
             </article>
         </section>
     </main>
     <footer>
-        <button class="botao" onclick="finalizar(this)">
+        <button class="botao" onclick="finalizarpedido()" disabled>
             Confirmar Pedido
         </button>
     </footer>
