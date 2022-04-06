@@ -59,24 +59,33 @@ function selecionarSobre(sobremesa){
 function revisarPedido() {
     let finalizador = document.querySelector(".backfinalizar");
     finalizador.classList.add("sumirfinal");
-    finalprato_name = selecionado.querySelector(".box figure figcaption").innerHTML;
-    pratofinal = selecionado.querySelector(".box span").innerHTML;
-    finalbebida_name = selecionado1.querySelector(".box figure figcaption").innerHTML;
-    bebidafinal = selecionado1.querySelector(".box span").innerHTML;
-    finalsobremesa_name = selecionado2.querySelector(".box figure figcaption").innerHTML;
-    sobremesafinal = selecionado2.querySelector(".box span").innerHTML;
-    Number(soma.toFixed(2)) = sobremesafinal + bebidafinal + pratofinal;
+    finalprato_name = document.querySelector(".box figure figcaption").innerHTML;
+    document.querySelector(".finalprato .finalprato_name").innerHTML = `${finalprato_name}`;
+    pratofinal = document.querySelector(".box span").innerHTML
+    document.querySelector(".finalprato .pratofinal").innerHTML = `${pratofinal}`;
+    finalbebida_name = document.querySelector(".box1 figure figcaption").innerHTML;
+    document.querySelector(".finalbebida .finalbebida_name").innerHTML = `${finalbebida_name}`;
+    bebidafinal = document.querySelector(".box1 span").innerHTML;
+    document.querySelector(".finalbebida .bebidafinal").innerHTML = `${bebidafinal}`;
+    finalsobremesa_name = document.querySelector(".box2 figure figcaption").innerHTML;
+    document.querySelector(".finalsobremesa .finalsobremesa_name").innerHTML = `${finalsobremesa_name}`;
+    sobremesafinal = document.querySelector(".box2 span").innerHTML;
+    document.querySelector(".finalsobremesa .sobremesafinal").innerHTML = `${sobremesafinal}`;
+    
+    soma = parseFloat(sobremesafinal) + parseFloat(bebidafinal) + parseFloat(pratofinal);
+    document.querySelector(".somafinal .finalsoma").innerHTML = `${soma}`;
+    console.log(pratofinal);
 }
 function enviarPedido(){
     const endereco = document.querySelector('.endereco .enderesu').value;
     const nome = document.querySelector(".nome .name").value;
     let wame = 
-    `Boa Noite +${nome}+
-    Prato: + ${finalprato_name}+ R$ + ${pratofinal} +
-    Bebida: + ${finalbebida_name} + R$ + ${bebidafinal} + 
-    Sobremesa: + ${finalsobremesa_name} + R$ + ${sobremesafinal} +
-    Endereço: + ${endereco} +
-    Forma de pagamento: + ${formapagamento} +
-    Valor Total: + R$ + ${soma}`;
-    window.open("https://wa.me/5532984898132?text=" + encodeURIComponent(wame));
+`Boa Noite ${nome}
+Prato: ${finalprato_name} R$ ${pratofinal} 
+Bebida: ${finalbebida_name} R$ ${bebidafinal} 
+Sobremesa: ${finalsobremesa_name} R$ ${sobremesafinal} 
+Endereço: ${endereco} 
+Valor Total: R$ ${soma}`;
+
+window.open("https://wa.me/5532984898132?text=" + encodeURIComponent(wame));                                                         
 }
