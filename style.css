@@ -129,6 +129,9 @@ footer{
     bottom: 0px;
     background: #FFFFFF;
 }
+figcaption{
+    
+}
 footer > button{
     font-family: 'Roboto';
     font-style: normal;
