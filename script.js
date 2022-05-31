@@ -2,13 +2,13 @@ let formapagamento = '';
 let principal= '';
 let bebida= '';
 let sobremesa= '';
-let soma= 0;
+let soma= '';
 let finalprato_name = '';
-let pratofinal = 0;
+let pratofinal = '';
 let finalbebida_name = '';
-let bebidafinal = 0;
+let bebidafinal = '';
 let finalsobremesa_name = '';
-let sobremesafinal =  0;
+let sobremesafinal =  '';
 
 function selecionarPrin(principal){
     let ctz;
@@ -21,6 +21,15 @@ function selecionarPrin(principal){
     principal.classList.add("selecionado");
     ctz = document.querySelector(".principal > .box.selecionado > .checkmark");
     ctz.classList.remove("sumir");
+    let seleprin = document.querySelector(".box.selecionado");
+    let selebebi = document.querySelector(".box1.selecionado");
+    let selesobre = document.querySelector(".box2.selecionado");
+    if (seleprin && selebebi && selesobre) {
+        let botao =  document.querySelector(".botao");
+        botao.classList.add("verdao");
+        botao.innerHTML = `Revisar pedido`;
+        botao.disabled = false;
+    }
 }
 function selecionarBebi(bebida){
     let ctz1;
@@ -33,22 +42,31 @@ function selecionarBebi(bebida){
     bebida.classList.add("selecionado");
     ctz1 = document.querySelector(".bebida > .box1.selecionado > .checkmark");
     ctz1.classList.remove("sumir");
+    let seleprin = document.querySelector(".box.selecionado");
+    let selebebi = document.querySelector(".box1.selecionado");
+    let selesobre = document.querySelector(".box2.selecionado");
+    if (seleprin && selebebi && selesobre) {
+        let botao =  document.querySelector(".botao");
+        botao.classList.add("verdao");
+        botao.innerHTML = `Revisar pedido`;
+        botao.disabled = false;
+    }
 }
 function selecionarSobre(sobremesa){
     let ctz2;
     let selecionado3 = document.querySelector(".sobremesa > .box2.selecionado");
-    if (selecionado3 !== null){
+    if (selecionado3 !== null){ 
     ctz2 = document.querySelector(".sobremesa > .box2.selecionado > .checkmark");
     ctz2.classList.add("sumir");
     selecionado3.classList.remove("selecionado");
+    
 }
     sobremesa.classList.add("selecionado");
     ctz2 = document.querySelector(".sobremesa > .box2.selecionado > .checkmark");
     ctz2.classList.remove("sumir");
-
-    const seleprin = document.querySelector(".box.selecionado");
-    const selebebi = document.querySelector(".box1.selecionado");
-    const selesobre = document.querySelector(".box2.selecionado");
+    let seleprin = document.querySelector(".box.selecionado");
+    let selebebi = document.querySelector(".box1.selecionado");
+    let selesobre = document.querySelector(".box2.selecionado");
     if (seleprin && selebebi && selesobre) {
         let botao =  document.querySelector(".botao");
         botao.classList.add("verdao");
@@ -72,20 +90,21 @@ function revisarPedido() {
     sobremesafinal = document.querySelector(".box2 span").innerHTML;
     document.querySelector(".finalsobremesa .sobremesafinal").innerHTML = `${sobremesafinal}`;
     
-    soma = parseFloat(sobremesafinal) + parseFloat(bebidafinal) + parseFloat(pratofinal);
-    document.querySelector(".somafinal .finalsoma").innerHTML = `${soma}`;
-    console.log(pratofinal);
+    soma = parseFloat(sobremesafinal.replace(/[^\d\.]*/g, "")) + parseFloat(bebidafinal.replace(/[^\d\.]*/g, "")) + parseFloat(pratofinal.replace(/[^\d\.]*/g, ""));
+    soma = soma/100;
+    document.querySelector(".somafinal .finalsoma").innerHTML = ` R$ ${soma}0`;
+    console.log(soma);
 }
 function enviarPedido(){
     const endereco = document.querySelector('.endereco .enderesu').value;
     const nome = document.querySelector(".nome .name").value;
     let wame = 
-`Boa Noite ${nome}
-Prato: ${finalprato_name} R$ ${pratofinal} 
-Bebida: ${finalbebida_name} R$ ${bebidafinal} 
-Sobremesa: ${finalsobremesa_name} R$ ${sobremesafinal} 
-Endereço: ${endereco} 
-Valor Total: R$ ${soma}`;
+    `Boa Noite ${nome}
+    Prato: ${finalprato_name} ${pratofinal} 
+    Bebida: ${finalbebida_name} ${bebidafinal} 
+    Sobremesa: ${finalsobremesa_name} ${sobremesafinal} 
+    Endereço: ${endereco} 
+    Valor Total: R$ ${soma}0`;
 
 window.open("https://wa.me/5532984898132?text=" + encodeURIComponent(wame));                                                         
 }
